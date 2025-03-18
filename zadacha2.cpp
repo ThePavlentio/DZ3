@@ -61,8 +61,6 @@ int main()
 
 	if (ifile.is_open())
 	{
-		std::cout << numAddress << std::endl;
-
 		for (int i{}; i < numAddress; ++i)
 		{
 			ifile >> city;
@@ -104,8 +102,12 @@ int main()
 					}
 				}
 			}
-			ofile << arrAddress[i].get_output_address();
 		}
+	}
+
+	for (int i{}; i < numAddress; ++i)
+	{
+		ofile << arrAddress[i].get_output_address();
 	}
 
 	ofile.close();
